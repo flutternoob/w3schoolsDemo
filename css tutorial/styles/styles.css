@@ -1,0 +1,48 @@
+div {
+    padding: 25px;
+    margin: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+div:nth-child(even) {
+    background-color: dodgerblue;
+}
+
+.main {
+    margin-left: 235px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+}
+
+div.links {
+    background-color: gray;
+    text-align: center;
+    position: fixed;
+    width: 165px;
+    height: 95%;
+    margin: 0%;
+    padding: 0%;
+}
+
+a, a:active {
+    color: black;
+    margin: 15px;
+    padding: 15px;
+}
+
+a:visited {
+    color: white;
+    margin: 15px;
+    padding: 15px;
+}
+
+a:hover {
+    color: red;
+    margin: 15px;
+    padding: 15px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
