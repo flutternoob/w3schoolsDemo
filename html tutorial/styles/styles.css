@@ -1,0 +1,113 @@
+body {
+    /*background-color: powderblue;*/
+    background-image: url("../images/chiron.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+h1 {
+    color: blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 300%;
+}
+p {
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 160%;
+    border: 2px solid black;
+    padding: 30px;
+    margin: 50px;
+}
+/*
+a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}
+*/
+a:link, a:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+a:hover, a:active {
+    background-color: red;
+}
+table {
+    border-spacing: 30px;
+}
+th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    background-color: #96D4D4;
+    padding: 5px;
+    border-radius: 10px;
+
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 40px;
+}
+tr:nth-child(even) {
+    /*background-color: #D6EEEE;*/
+    background-color: rgba(150, 212, 212, 0.4);
+}
+td:nth-child(even), th:nth-child(even) {
+    /*background-color: #D6EEEE;*/
+    background-color: rgba(150, 212, 212, 0.4);
+}
+tr:hover {background-color: #D6EEEE;}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+.city {
+    background-color: tomato;
+    color: white;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+}
+.note {
+    font-size: 120%;
+    color: red;
+}
+#myHeader {
+    background-color: lightblue;
+    color: black;
+    padding: 40px;
+    text-align: center;
+}
+@media screen and (max-width: 800px) {
+    .left, .main, .right {
+      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+}
