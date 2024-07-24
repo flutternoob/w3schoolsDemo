@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Demo</title>
+    </head>
+    <body>
+
+        <p id="demo"></p>
+
+        <script>
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("demo").innerHTML = fruits.toString();
+
+            let fruit = fruits[fruits.length - 1];
+            document.getElementById("demo").innerHTML = fruit.toString();
+
+            /*
+                let text = "<ul>";
+                for (let i=0; i<fruits.length; i++) {
+                    text += "<li>" + fruits[i] + "</li>";
+                }
+            text += "</ul>";
+
+            document.getElementById("demo").innerHTML = text;
+            */
+            
+            let text = "<ul>";
+            fruits.forEach(myFunction);
+            text += "</ul>";
+
+            document.getElementById("demo").innerHTML = text;
+
+            function myFunction(value) {
+                text += "<li>" + value + "</li>";
+            }
+
+            const myObj = {
+                            name: "John",
+                            age: 30,
+                            cars: [
+                                {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
+                                {name:"BMW", models:["320", "X3", "X5"]},
+                                {name:"Fiat", models:["500", "Panda"]}
+                            ]         
+                        }
+
+            let x = "";
+
+            for (let i in myObj.cars) {
+                    x += "<h1>" + myObj.cars[i].name + "</h1>";
+                        for (let j in myObj.cars[i].models) {
+                            x += myObj.cars[i].models[j] + "<br>";
+                        }
+            }
+
+            document.getElementById("demo").innerHTML = x;
+        </script>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+const points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo1").innerHTML = points;  
+
+points.sort(function(a, b){return a - b});
+document.getElementById("demo2").innerHTML = points;
+</script>
+
+<script>
+    const cars = [
+      {type:"Volvo", year:2016},
+      {type:"Saab", year:2001},
+      {type:"BMW", year:2010}
+    ];
+    
+    displayCars();
+    
+    cars.sort(function(a, b){return a.year - b.year});
+    displayCars();
+    
+    function displayCars() {
+      document.getElementById("demo").innerHTML =
+      cars[0].type + " " + cars[0].year + "<br>" +
+      cars[1].type + " " + cars[1].year + "<br>" +
+      cars[2].type + " " + cars[2].year;
+    }
+    </script>
+
+<script>
+    const numbers = [45, 4, 9, 16, 25];
+    
+    let txt = "";
+    numbers.forEach(myFunction);
+    document.getElementById("demo").innerHTML = txt;
+    
+    function myFunction(value) {
+      txt += value + "<br>"; 
+    }
+    </script>
+
+<script>
+    const num = [45, 4, 9, 16, 25];
+    let sum = num.reduce(myFunction);
+    
+    document.getElementById("demo").innerHTML = "The sum is " + sum;
+    
+    function myFunction(total, value) {
+      return total + value;
+    }
+    </script>
+
+<script>
+    const q1 = ["Jan", "Feb", "Mar"];
+    const q2 = ["Apr", "May", "Jun"];
+    const q3 = ["Jul", "Aug", "Sep"];
+    const q4 = ["Oct", "Nov", "May"];
+    
+    const year = [...q1, ...q2, ...q3, ...q4];
+    document.getElementById("demo").innerHTML = year; 
+    </script>
+
+<script>
+    const person = {fname:"John", lname:"Doe", age:25}; 
+    
+    let txtnew = "";
+    for (let x in person) {
+      txtnew += person[x] + " ";
+    }
+    
+    document.getElementById("demo").innerHTML = txtnew;
+    </script>
+
+<script>
+    const numbers1 = [45, 4, 9, 16, 25];
+    
+    let txt1 = "";
+    numbers.forEach(myFunction);
+    document.getElementById("demo").innerHTML = txt1;
+    
+    function myFunction(value) {
+      txt1 += value + "<br>"; 
+    }
+    </script>
+
+<script>
+    const cars1 = ["BMW", "Volvo", "Mini"];
+    
+    let text1 = "";
+    for (let x of cars1) {
+      text1 += x + "<br>";
+    }
+    
+    document.getElementById("demo").innerHTML = text1;
+    </script>
+
+<script>
+    // Create a Set
+    const letters = new Set(["a","b","c"]);
+    
+    // Display set.size
+    document.getElementById("demo").innerHTML = "The set has " + letters.size + " values.";
+    </script>
+    </body>
+</html>
